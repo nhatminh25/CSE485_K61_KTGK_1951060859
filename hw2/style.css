@@ -1,0 +1,158 @@
+.height-vh{
+    height:100vh
+}
+.bg-gray-light{
+    background-color: rgb(235, 235, 235);
+}
+
+
+.text-red{
+    color:hotpink
+}
+
+.width-100{
+    width:100
+}
+.column-center{
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+.submitsearch{
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/bg.jpg);
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+    justify-content: center;
+}
+.heading{
+    width: 100%;
+    height: auto;
+}
+
+.menu-edit{
+    color:#ff6b81 ;
+}
+.logoo{
+    float: right;
+    width:40%;
+}
+.butsearch{
+    background-color: #ff6b81;
+    color: white;
+}
+.butsearch:hover{
+    background-color: #dc3545;
+}
+
+.search-edit{
+    width: 500px;
+}
+.photo{
+    justify-content: center;
+    border-radius: 15px;
+}
+.center h1{
+    margin: 50px 0 50px 0;
+    text-align: center;
+}
+.foodmenu{
+    background-color: #ececec;
+    padding: 1% 0;
+}
+.box-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+    
+}
+.box-image{
+    width: 20%;
+    float: left;
+}
+.box-photo{
+    width: 100%;
+}
+.box-vien{
+    border-radius: 15px;
+}
+.box-title{
+    width: auto;
+    float: right;
+    margin-left: 10px;
+}
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+.btn-outline-danger {
+    background-color: #ff6b81;
+    color: white;
+}
+.more h6{
+    text-align: center;
+    color: #ff6b81;
+}
+.social h6{
+    text-align: center;
+    color: #ff6b81;
+}
+.social{
+    margin: 20px;
+}
+.social .container{
+    margin-bottom: 20px;
+}
+.foodmenu h1{
+    box-sizing: border-box;
+    margin-bottom: 1;
+}
+.manage{
+    background-color: #ececec;
+    border-top: 1px solid;
+}
+.title-left h1{
+    margin:40px 0 80px 100px;
+}
+.title-left-but{
+    margin:0px 0 80px 100px;
+}
+.col h4{
+    text-align: center;
+}
+.col h6{
+    text-align: center;
+}
+.margin-bot-dashboard{
+    margin-bottom: 40px;
+}
+.ending{
+    width: 100%;
+    background-color: #ff6b81;
+}
+.ending .nav-link{
+    color: white;
+}
+.ending .nav-link:hover{
+    color: white;
+}
+.head-edit .nav-link{
+    color:#ff6b81;
+}
+.update{
+    background-color: rgb(120, 201, 120);
+    border-color: rgb(120, 201, 120);
+}
+.delete{
+    background-color: #ff6b81;
+    border-color: #ff6b81;
+}
+.box-table{
+    width: 60%;
+    margin: auto;   
+} 
