@@ -10,31 +10,26 @@
 </head>
 <body>
     
-    <h1 class="text-center">Thue xe Duong dai ahihihi </h1>
-        <div>
-            <a href="add.php">Them moi</a>
-</div>
-
+    <h1 class="text-center">Thue xe Duong dai Chi tiet</h1>
+    <a href="<?php echo SITE_URL ?>">quay lai trang chu </a>
     <table class="table table-hover">
         <tr>
-            <th scope="col">STT</th>
+            <th scope="col">vehicle id</th>
+            <th scope="col">license no </th>
             <th scope="col"> model </th>
+            <th scope="col"> year </th>
             <th scope="col"> car type </th>
             <th scope="col"> day rate </th>
-            <th scope="col"> weak rate </th>
+            <th scope="col"> weak reate </th>
             <th scope="col"> status </th>
-            <th scope="col"> details </th>
-
 </tr>
 
     <?php
-        $sql = 'SELECT * FROM xe';
+        $id = $_GET['vehicle_id'];
+        $sql = "SELECT * FROM xe WHERE vehicle_id='$id'";
         $res = mysqli_query($conn,$sql) or die(mysqli_error());
-        $count = mysqli_num_rows($res) ;
-        if($count = 0){
-            die;
-        }
-        $i=1;
+        $count = mysqli_num_rows($res);
+        
         while($row = mysqli_fetch_assoc($res)){
                 $vehicle_id = $row['vehicle_id'];
                 $license_no = $row['license_no'];
@@ -47,14 +42,16 @@
 
         ?>
         <tr>
-        <td><?php echo $i++ ?></td>
-        <td ><?php echo $model ?></td>
-        <td><?php echo $ctype ?></td>
+        <td><?php echo $vehicle_id ?></td>
+        <td><?php echo $license_no ?></td>
+        <td><?php echo $model ?></td>
+        <td><?php echo $year ?></td>
+        <td ><?php echo $ctype ?></td>
         <td><?php echo $drate ?></td>
         <td><?php echo $wrate ?></td>
         <td><?php echo $status ?></td>
-
-        <td><a href="<?php echo SITE_URL.'details.php?vehicle_id='.$vehicle_id ?>">Xem chi tiet </a> </td>
+        <td><a href="<?php echo SITE_URL.'update.php?id='.$id?>">EDIT</a></td> 
+        <td><a href="<?php echo SITE_URL.'delete.php?id='.$id?>">DELETE</a></td> 
     </tr>
     <?php
         }

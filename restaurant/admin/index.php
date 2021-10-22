@@ -27,7 +27,7 @@
                     ?>
 
                     <h1><?php echo $count; ?></h1>
-                    <br />
+                    <br/>
                     Categories
                 </div>
 
