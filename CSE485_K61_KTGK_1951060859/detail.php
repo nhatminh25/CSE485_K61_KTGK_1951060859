@@ -6,27 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Chi tiết xe</title>
 </head>
 <body>
     
-    <h1 class="text-center">Thue xe Duong dai Chi tiet</h1>
-    <a href="<?php echo SITE_URL ?>">quay lai trang chu </a>
+    <h1 class="text-center">Thuê xe</h1>
+    <a href="<?php echo SITE_URL ?>">Quay lại trang chủ </a>
     <table class="table table-hover">
         <tr>
-            <th scope="col">vehicle id</th>
-            <th scope="col">license no </th>
-            <th scope="col"> model </th>
-            <th scope="col"> year </th>
-            <th scope="col"> car type </th>
-            <th scope="col"> day rate </th>
-            <th scope="col"> weak reate </th>
-            <th scope="col"> status </th>
+            <th scope="col"> Mã xe</th>
+            <th scope="col"> Biển số xe </th>
+            <th scope="col"> Model </th>
+            <th scope="col"> Năm sản xuất </th>
+            <th scope="col"> Kiểu oto </th>
+            <th scope="col"> Giá thuê theo ngày </th>
+            <th scope="col"> Giá thuê theo tuần </th>
+            <th scope="col"> Trạng thái </th>
 </tr>
 
     <?php
-        $id = $_GET['vehicle_id'];
-        $sql = "SELECT * FROM xe WHERE vehicle_id='$id'";
+        $sql = 'SELECT * FROM `thông tin xe cho thuê`';
         $res = mysqli_query($conn,$sql) or die(mysqli_error());
         $count = mysqli_num_rows($res);
         
@@ -50,8 +49,8 @@
         <td><?php echo $drate ?></td>
         <td><?php echo $wrate ?></td>
         <td><?php echo $status ?></td>
-        <td><a href="<?php echo SITE_URL.'update.php?id='.$id?>">EDIT</a></td> 
-        <td><a href="<?php echo SITE_URL.'delete.php?id='.$id?>">DELETE</a></td> 
+        <td><a href="<?php echo SITE_URL.'update.php?id='.$vehicle_id?>">EDIT</a></td> 
+        <td><a href="<?php echo SITE_URL.'delete.php?id='.$vehicle_id?>">DELETE</a></td> 
     </tr>
     <?php
         }

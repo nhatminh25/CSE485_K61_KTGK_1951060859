@@ -6,32 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Thuê xe</title>
 </head>
 <body>
     
-    <h1 class="text-center">Thue xe Duong dai ahihihi </h1>
+    <h1 class="text-center">Thông tin thuê xe</h1>
         <div>
-            <a href="add.php">Them moi</a>
+            <a href="add.php">Thêm xe cần thuê</a>
 </div>
 
     <table class="table table-hover">
         <tr>
             <th scope="col">STT</th>
-            <th scope="col"> model </th>
-            <th scope="col"> car type </th>
-            <th scope="col"> day rate </th>
-            <th scope="col"> weak rate </th>
-            <th scope="col"> status </th>
-            <th scope="col"> details </th>
+            <th scope="col"> Model </th>
+            <th scope="col"> Kiểu oto </th>
+            <th scope="col"> Giá thuê theo ngày </th>
+            <th scope="col"> Giá thuê theo tuần </th>
+            <th scope="col"> Trạng thái </th>
+            <th scope="col"> Xem chi tiết </th>
 
 </tr>
 
     <?php
-        $sql = 'SELECT * FROM xe';
+        $sql = 'SELECT * FROM `thông tin xe cho thuê`';
         $res = mysqli_query($conn,$sql) or die(mysqli_error());
         $count = mysqli_num_rows($res) ;
-        if($count = 0){
+        if($count = 0)
+        {
             die;
         }
         $i=1;
@@ -54,7 +55,7 @@
         <td><?php echo $wrate ?></td>
         <td><?php echo $status ?></td>
 
-        <td><a href="<?php echo SITE_URL.'details.php?vehicle_id='.$vehicle_id ?>">Xem chi tiet </a> </td>
+        <td><a href="<?php echo SITE_URL.'detail.php'?>">Xem chi tiet </a> </td>
     </tr>
     <?php
         }
